@@ -1,0 +1,27 @@
+.hiddenScroll {
+  overflow-y: scroll;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hiddenScroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hiddenScroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.fadedTop {
+  content: '';
+  top: 60px;
+  height: 60px;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: absolute;
+  z-index: 10;
+}
