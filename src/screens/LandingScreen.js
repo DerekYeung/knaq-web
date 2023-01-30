@@ -19,7 +19,9 @@ const LandingScreen = () => {
 
     const { mutate: waitlistHandler, isLoading } = useMutation((e) => {
         e.preventDefault()
-        return axios.post(`/api/manualWaitlist`, { email })
+        return axios.post(`https://next.knaqapp.com/join`, {
+            email
+        })
     }, {
         onSuccess: (data) => { setSuccess(true); setError('') },
         onError: (error) => { setError(error.response && error.response.data.message ? error.response.data.message : error.message) }

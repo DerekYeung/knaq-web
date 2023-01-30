@@ -12,7 +12,9 @@ const PromoScreen = () => {
 
     const { mutate: waitlistHandler, isLoading } = useMutation((e) => {
         e.preventDefault()
-        return axios.post(`/api/manualWaitlist`, { email })
+        return axios.post(`https://next.knaqapp.com/join`, {
+            email
+        })
     }, {
         onSuccess: (data) => {
             setSuccess(true)
